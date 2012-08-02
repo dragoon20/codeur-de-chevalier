@@ -627,47 +627,177 @@ Stack trace:
 REQUEST_URI=/compfest2012/user/login
 HTTP_REFERER=http://localhost/compfest2012/user/login
 ---
-2012/08/02 17:09:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'compfest2012-2'' in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php:382
+2012/08/02 09:11:57 [error] [php] Undefined index: Profile (C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php:56)
 Stack trace:
-#0 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
-#1 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
-#2 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CModule.php(388): CDbConnection->init()
-#3 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
-#4 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
-#5 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
-#6 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Materi))
-#7 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Materi')
-#8 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\controllers\MateriController.php(13): CActiveDataProvider->__construct('Materi', Array)
-#9 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
-#10 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#11 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#12 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('index')
-#14 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/index')
-#15 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#16 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\index.php(13): CApplication->run()
-#17 {main}
-REQUEST_URI=/codeur-de-chevalier/compfest2012/materi/index
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(287): UserController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(266): UserController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): UserController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/user/register
+in C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php (56)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/02 09:12:30 [error] [exception.CException] exception 'CException' with message 'Property "RegistrationForm.activkey" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(160): CComponent->__set('activkey', '549c2418a71d2d1...')
+#1 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(60): CActiveRecord->__set('activkey', '549c2418a71d2d1...')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('register')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/register')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/compfest2012/user/register
+HTTP_REFERER=http://localhost/compfest2012/user/register
 ---
-2012/08/02 17:09:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'compfest2012-2'' in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php:382
+2012/08/02 09:15:01 [error] [exception.CException] exception 'CException' with message 'Property "RegistrationForm.type" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:174
 Stack trace:
-#0 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
-#1 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
-#2 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CModule.php(388): CDbConnection->init()
-#3 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
-#4 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
-#5 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
-#6 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Materi))
-#7 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Materi')
-#8 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\controllers\MateriController.php(13): CActiveDataProvider->__construct('Materi', Array)
-#9 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
-#10 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
-#11 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
-#12 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
-#13 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('index')
-#14 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/index')
-#15 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
-#16 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\index.php(13): CApplication->run()
-#17 {main}
-REQUEST_URI=/codeur-de-chevalier/compfest2012/materi/index
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(160): CComponent->__set('type', 0)
+#1 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(63): CActiveRecord->__set('type', 0)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('register')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/register')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/compfest2012/user/register
+HTTP_REFERER=http://localhost/compfest2012/user/register
+---
+2012/08/02 09:15:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`compfest2012-2`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `user_type` (`type_id`)). The SQL statement executed was: INSERT INTO `user` (`username`, `password`, `activation_code`, `user_type`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php (65)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/02 09:15:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`compfest2012-2`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `user_type` (`type_id`)). The SQL statement executed was: INSERT INTO `user` (`username`, `password`, `activation_code`, `user_type`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(65): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('register')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/register')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/compfest2012/user/register
+HTTP_REFERER=http://localhost/compfest2012/user/register
+---
+2012/08/02 09:16:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`compfest2012-2`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `user_type` (`type_id`)). The SQL statement executed was: INSERT INTO `user` (`username`, `password`, `activation_code`, `user_type`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php (65)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/02 09:16:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`compfest2012-2`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `user_type` (`type_id`)). The SQL statement executed was: INSERT INTO `user` (`username`, `password`, `activation_code`, `user_type`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(65): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('register')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/register')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/compfest2012/user/register
+HTTP_REFERER=http://localhost/compfest2012/user/register
+---
+2012/08/02 09:17:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`compfest2012-2`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `user_type` (`type_id`)). The SQL statement executed was: INSERT INTO `user` (`username`, `password`, `activation_code`, `user_type`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php (65)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/02 09:17:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`compfest2012-2`.`user`, CONSTRAINT `user_ibfk_1` FOREIGN KEY (`user_type`) REFERENCES `user_type` (`type_id`)). The SQL statement executed was: INSERT INTO `user` (`username`, `password`, `activation_code`, `user_type`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(65): CActiveRecord->save()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('register')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/register')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/compfest2012/user/register
+HTTP_REFERER=http://localhost/compfest2012/user/register
+---
+2012/08/02 09:17:51 [error] [exception.CException] exception 'CException' with message 'Property "RegistrationForm.id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('id')
+#1 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(66): CActiveRecord->__get('id')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionRegister()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('register')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/register')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/compfest2012/user/register
+HTTP_REFERER=http://localhost/compfest2012/user/register
+---
+2012/08/02 09:20:06 [error] [exception.CException] exception 'CException' with message 'Property "User.id" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('id')
+#1 C:\xampp\htdocs\compfest2012\protected\components\UserIdentity.php(28): CActiveRecord->__get('id')
+#2 C:\xampp\htdocs\compfest2012\protected\models\UserLogin.php(52): UserIdentity->authenticate()
+#3 C:\xampp\htdocs\yii\framework\validators\CInlineValidator.php(43): UserLogin->authenticate('password', Array)
+#4 C:\xampp\htdocs\yii\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#5 C:\xampp\htdocs\yii\framework\base\CModel.php(158): CValidator->validate(Object(UserLogin), NULL)
+#6 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(22): CModel->validate()
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/compfest2012/user/login
+HTTP_REFERER=http://localhost/compfest2012/user/login
+---
+2012/08/02 09:20:44 [error] [exception.CException] exception 'CException' with message 'UserController and its behaviors do not have a method or closure named "lastViset".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(23): CComponent->__call('lastViset', Array)
+#1 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(23): UserController->lastViset()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/compfest2012/user/login
+HTTP_REFERER=http://localhost/compfest2012/user/login
+---
+2012/08/02 09:21:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('post')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/index.php/post
+HTTP_REFERER=http://localhost/compfest2012/user/login
+---
+2012/08/02 09:24:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('post')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/index.php/post
+HTTP_REFERER=http://localhost/compfest2012/user/login
 ---

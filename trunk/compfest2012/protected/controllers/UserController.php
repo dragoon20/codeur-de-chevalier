@@ -20,17 +20,13 @@ class UserController extends Controller
 				$model->attributes=$_POST['UserLogin'];
 				// validate user input and redirect to previous page if valid
 				if($model->validate()) {
-					$this->lastViset();
-					if (Yii::app()->user->returnUrl=='/index.php')
-						$this->redirect('/index.php/post');
-					else
-						$this->redirect(Yii::app()->request->baseUrl.'/index.php/post');
+					$this->redirect(Yii::app()->user->returnUrl);
 				}
 			}
 			// display the login form
 			$this->render('login', array('model' => $model));
 		} else
-			$this->redirect(Yii::app()->request->baseUrl.'/index.php/post');
+			$this->redirect(Yii::app()->user->returnUrl);
 	}
 	
 	public function actionRegister()
@@ -52,17 +48,17 @@ class UserController extends Controller
 		    } else {
 		    	if(isset($_POST['RegistrationForm'])) {
 					$model->attributes=$_POST['RegistrationForm'];
-					$profile->attributes=((isset($_POST['Profile'])?$_POST['Profile']:array()));
+					$profile->attributes=((isset($_POST['Profiles'])?$_POST['Profiles']:array()));
 					if($model->validate()&&$profile->validate())
 					{
 						$soucePassword = $model->password;
-						$model->activkey=md5(microtime().$model->password);
+						$model->activation_code=md5(microtime().$model->password);
 						$model->password=md5($model->password);
 						$model->verifyPassword=md5($model->verifyPassword);
-						$model->superuser=0;
+						$model->user_type=0;
 						
 						if ($model->save()) {
-							$profile->user_id=$model->id;
+							$profile->user_id=$model->user_id;
 							$profile->save();
 							/*if (Yii::app()->controller->module->sendActivationMail) {
 								$activation_url = $this->createAbsoluteUrl('/user/activation/activation',array("activkey" => $model->activkey, "email" => $model->email));
