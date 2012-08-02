@@ -92,6 +92,7 @@ class User extends CActiveRecord
 			'handphone' => 'Handphone',
 			'tanggal_lahir' => 'Tanggal Lahir',
 			'user_type' => 'User Type',
+			'verifyPassword' => 'Verifikasi Sandi'
 		);
 	}
 

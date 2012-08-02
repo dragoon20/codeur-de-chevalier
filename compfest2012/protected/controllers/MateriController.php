@@ -42,6 +42,22 @@ class MateriController extends Controller
 		return $this->_model;
 	}
 	
+	public function actionCreate()
+	{
+		$model = new Materi;
+		
+		if(isset($_POST['Materi']))
+		{
+			$model->attributes=$_POST['Materi'];
+			if($model->save())
+				$this->redirect(array('materi/index'));
+		}
+		
+		$this->render('create',array(
+			'model'=>$model,
+		));
+	}
+	
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

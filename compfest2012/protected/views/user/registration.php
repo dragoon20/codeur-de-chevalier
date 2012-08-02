@@ -1,10 +1,10 @@
-<?php //$this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Registration");
+<?php 
 $this->breadcrumbs=array(
-	"Registration",
+	"Daftar",
 );
 ?>
 
-<h1><?php echo "Registrasi"; ?></h1>
+<h1><?php echo "Daftar"; ?></h1>
 
 <?php if(Yii::app()->user->hasFlash('registration')): ?>
 <div class="success">
@@ -35,9 +35,6 @@ $this->breadcrumbs=array(
 	<?php echo $form->label($model,'password'); ?>
 	<?php echo $form->passwordField($model,'password'); ?>
 	<?php echo $form->error($model,'password'); ?>
-	<p class="hint">
-	<?php echo "Minimal password length 4 symbols."; ?>
-	</p>
 	</div>
 	
 	<div class="row">
@@ -55,23 +52,6 @@ $this->breadcrumbs=array(
 		<?php 
 		if ($widgetEdit = $field->widgetEdit($profile)) {
 			echo $widgetEdit;
-		} elseif ($field->field_type=='fakul') {
-			$temp=LookupFakultas::items();
-			echo $form->dropDownList($profile,$field->varname,$temp,
-				array(
-					'ajax'=>array(
-						'type'=>'POST',
-						'url'=>CController::createUrl('site/Dynamicjurusan'),
-						'update'=>'#'.CHtml::activeId($profile,'jurusan')),
-			));
-		} elseif ($field->field_type=='jurus') {
-			echo $form->dropDownList($profile,$field->varname,array());
-		} elseif ($field->range) {
-			$temp=Profiles::range($field->range);
-			echo $form->dropDownList($profile,$field->varname,$temp,
-				array(
-					'options'=>array('2010'=>array('selected'=>'selected')),
-			));
 		} elseif ($field->field_type=="DATE"){
 			$tempdate=$field->varname;
 			$this->widget('zii.widgets.jui.CJuiDatePicker', array(
