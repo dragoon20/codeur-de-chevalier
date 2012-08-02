@@ -4,7 +4,9 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1><?php echo "Masuk"; ?></h1>
+<div style="font-size:20px;padding-bottom:10px;">
+	<?php echo "MASUK"; ?>
+</div>
 
 <?php if(Yii::app()->user->hasFlash('loginMessage')): ?>
 
@@ -19,20 +21,20 @@ $this->breadcrumbs=array(
 	
 	<?php echo CHtml::errorSummary($model); ?>
 	<div class="row">
-		<?php echo CHtml::activeLabel($model,'username'); ?>
-		<?php echo CHtml::activeTextField($model,'username') ?>
+		<div style="" class="left"> <?php echo CHtml::activeLabel($model,'username'); ?> </div>
+		<div class="left"><?php echo CHtml::activeTextField($model,'username') ?> </div>
 	</div>
-	
+	<div style="clear:both"> </div>
 	<div class="row">
-		<?php echo CHtml::activeLabel($model,'password'); ?>
-		<?php echo CHtml::activePasswordField($model,'password') ?>
+		<div class="left"> <?php echo CHtml::activeLabel($model,'password'); ?> </div>
+		<div class="left"> <?php echo CHtml::activePasswordField($model,'password') ?></div>
 	</div>
-	
+	<div style="clear:both"> </div>	
 	<div class="row rememberMe">
-		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-		<?php echo CHtml::activeLabel($model,'rememberMe'); ?>
+		<div class="left"><?php echo CHtml::activeCheckBox($model,'rememberMe'); ?></div>
+		<div class="left"><?php echo CHtml::activeLabel($model,'rememberMe'); ?></div>
 	</div>
-
+	<div style="clear:both"> </div>
 	<div class="row submit">
 		<?php echo CHtml::submitButton('Masuk'); ?>
 	</div>

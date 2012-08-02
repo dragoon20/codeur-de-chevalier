@@ -627,3 +627,47 @@ Stack trace:
 REQUEST_URI=/compfest2012/user/login
 HTTP_REFERER=http://localhost/compfest2012/user/login
 ---
+2012/08/02 17:09:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'compfest2012-2'' in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Materi))
+#7 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Materi')
+#8 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\controllers\MateriController.php(13): CActiveDataProvider->__construct('Materi', Array)
+#9 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
+#10 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#14 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/index')
+#15 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/codeur-de-chevalier/compfest2012/materi/index
+---
+2012/08/02 17:09:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[42000] [1049] Unknown database 'compfest2012-2'' in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(331): CDbConnection->open()
+#1 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbConnection.php(309): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CModule.php(388): CDbConnection->init()
+#3 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(431): CModule->getComponent('db')
+#4 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(615): CApplication->getDb()
+#5 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(2263): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(Materi))
+#7 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CActiveDataProvider.php(75): CActiveRecord::model('Materi')
+#8 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\controllers\MateriController.php(13): CActiveDataProvider->__construct('Materi', Array)
+#9 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
+#10 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#14 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/index')
+#15 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/codeur-de-chevalier/compfest2012/materi/index
+---

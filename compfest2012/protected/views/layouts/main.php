@@ -18,14 +18,7 @@
 </head>
 
 <body>
-
-<div class="container" id="page">
-
-	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
-	</div><!-- header -->
-
-	<div id="mainmenu">
+	<div id="mainmenu" class="left">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Home', 'url'=>array('/site/index')),
@@ -35,24 +28,42 @@
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
-	</div><!-- mainmenu -->
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+	</div>
+	<!-- mainmenu -->
 
-	<?php echo $content; ?>
+	<div class="container" id="page" class="left">
 
-	<div class="clear"></div>
+		<div id="header">
+			<div id="logo">
+				<!-- <?php echo CHtml::encode(Yii::app()->name); ?> -->
+				<span style="color:#33c7c7;">D</span><span style="color:#ff6a9a;">U</span><span style="color:#feca65;">N</span><span style="color:#67cb99;">I</span><span style="color:#ff6431;">A</span>
+				<span style="color:#9e6ca1;">A</span><span style="color:#fd9bce;">N</span><span style="color:#5f5f5f;">A</span><span style="color:#31ce65;">K</span>
+				<span style="color:#ff642f;">C</span><span style="color:#ff999d;">E</span><span style="color:#64cccb;">R</span><span style="color:#fc9836;">D</span><span style="color:#936594;">A</span><span style="color:#46c2ca;">S</span>
+			</div>
+			<div id="motto">
+				Belajar apapun, dimanapun dan kapanpun kamu mau.
+			</div>
+		</div>
+		<!-- header -->
 
-	<div id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-		All Rights Reserved.<br/>
-		<?php echo Yii::powered(); ?>
-	</div><!-- footer -->
+		<?php if(isset($this->breadcrumbs)):?>
+			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'links'=>$this->breadcrumbs,
+			)); ?><!-- breadcrumbs -->
+		<?php endif?>
 
-</div><!-- page -->
+		<?php echo $content; ?>
+
+		<div class="clear"></div>
+
+		<div id="footer">
+			Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+			All Rights Reserved.<br/>
+			<?php echo Yii::powered(); ?>
+		</div>
+		<!-- footer -->
+
+	</div><!-- page -->
 
 </body>
 </html>
