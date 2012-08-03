@@ -10,16 +10,16 @@
 		?>
 		</h1>
 	</div>
-
+	<div class="author">
+		oleh <?php echo $profile->name; ?>
+	</div>
+	<br><br>
 	<div class="entry">
 		<?php
 			$this->beginWidget('CMarkdown', array('purifyOutput'=>true));
 			echo $data->deskripsi;
 			$this->endWidget();
 		?>
-	</div>
-	<div class="author">
-		made by <?php echo $profile->name; ?>
 	</div>
 	<div class="datebox right">
 		<?php echo date('H:i:s - D, d F Y',$data->update_time); ?>
