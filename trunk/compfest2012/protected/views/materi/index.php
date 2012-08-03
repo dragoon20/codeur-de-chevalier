@@ -1,4 +1,3 @@
-
 <?php 
 	if (Yii::app()->user->isGuest)
 	{
@@ -14,3 +13,4 @@
 	'itemView'=>$temp,
 	'template'=>"{items}\n{pager}",
 )); ?>
+

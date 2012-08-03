@@ -31,7 +31,7 @@
 			<span style="color:#ff642f;">C</span><span style="color:#ff999d;">E</span><span style="color:#64cccb;">R</span><span style="color:#fc9836;">D</span><span style="color:#936594;">A</span><span style="color:#46c2ca;">S</span>
 		</div>
 		<div id="motto">
-			Belajar apapun, dimanapun dan kapanpun kamu mau.
+			Belajar apapun, dimanapun dan kapanpun kamu mau!
 		</div>
 	</div>
 	<!-- header -->
@@ -46,8 +46,8 @@
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Masuk', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Daftar', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Bikin Materi Kuliah', 'url'=>array('/materi/create_kuliah'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
-				array('label'=>'Edit Materi Kuliah', 'url'=>array('/materi/manage'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
+				array('label'=>'Unggah Materi', 'url'=>array('/materi/create_kuliah'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
+				array('label'=>'Edit Materi', 'url'=>array('/materi/manage'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
 				array('label'=>'Keluar', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>

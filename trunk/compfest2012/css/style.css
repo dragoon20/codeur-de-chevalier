@@ -64,14 +64,15 @@ box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17); }
 text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;border:none;
 -webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
 -moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.17);
-box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);cursor:pointer; }
+box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);cursor:pointer;}
 .link_blue:hover{background-color:#0092dd;text-decoration:none;}
 
-.link_green {background-color:#b6d150; color:#fff; padding-left:18px; padding-right:18px; padding-top:8px; padding-bottom:8px; text-decoration:none;
+.link_green {background-color:#d6e15f; color:#fff; padding-left:18px; padding-right:18px; padding-top:8px; padding-bottom:8px; text-decoration:none;
 -webkit-box-shadow:2px 3px 5px rgba(50,50,50,0.17);-moz-box-shadow:2px 3px 5px rgba(50,50,50,0.17); box-shadow:2px 3px 5px rgba(50,50,50,0.17);
-letter-spacing:1px; font-size:17px;font-weight:bold;cursor:pointer;}
-.link_green:hover {background-color:#d6e15f; text-decoration:none;}
-
+letter-spacing:1px; font-size:17px;font-weight:bold;text-align:center;}
+.link_red {background-color:#ff642f; color:#fff; padding-left:18px; padding-right:18px; padding-top:8px; padding-bottom:8px; text-decoration:none;
+-webkit-box-shadow:2px 3px 5px rgba(50,50,50,0.17);-moz-box-shadow:2px 3px 5px rgba(50,50,50,0.17); box-shadow:2px 3px 5px rgba(50,50,50,0.17);
+letter-spacing:1px; font-size:17px;font-weight:bold;text-align:center;}
 .submit input {background-color:#007bc1; color:#fff; padding-left:10px; padding-right:10px; padding-top:8px; padding-bottom:8px; 
 text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;border:none; cursor:pointer;
 -webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
