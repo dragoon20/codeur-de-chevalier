@@ -858,7 +858,7 @@ function start1(top){
 			{
 				top: top,
 				opacity: 1,
-			},3000,function()
+			},1200,function()
 			{
 				update();
 				transform();
@@ -867,17 +867,18 @@ function start1(top){
 		
 	}
 }
-function start2(){
+function start2(top){
 	if (isClicked2){
 		isClicked2 = false;
 		transform();
+		top -= 200;
 		setTimeout(function()
 		{
 			$("#robot").animate(
 			{
-				top: '-500px',
-				opacity: 1,
-			},3000,function()
+				top: top,
+				opacity: 0.5,
+			},1200,function()
 			{
 				update();
 			});

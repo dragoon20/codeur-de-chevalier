@@ -19,6 +19,10 @@
 	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.22.custom.min.js" type="text/javascript"></script>
 	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
+	<?php 
+		Yii::app()->user->setReturnUrl(Yii::app()->user->getState("url")); 
+		Yii::app()->user->setState("url",Yii::app()->request->requestUri);
+	?>
 </head>
 
 <body>
@@ -42,42 +46,47 @@
 			'items'=>array(
 				array('label'=>'Beranda', 'url'=>array('/site/index')),
 				array('label'=>'Materi', 'url'=>array('/materi/index')),
-				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Masuk', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Daftar', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Buat Materi', 'url'=>array('/materi/create'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
-				array('label'=>'Edit Materi', 'url'=>array('/materi/manage'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
+				array('label'=>'Buat Materi', 'url'=>array('/materi/create'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==1),
+				array('label'=>'Edit Materi', 'url'=>array('/materi/manage'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==1),
 				array('label'=>'Keluar', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div>
 	<!-- mainmenu -->
 	
-	
+	<div class="breadcrumbs">
+		<?php if(isset($this->breadcrumbs)):?>
+			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'homeLink'=>CHtml::link('Home', array('/site/index')),
+				'links'=>$this->breadcrumbs,
+				'separator'=>'',
+			)); ?>
+			<!-- breadcrumbs -->
+		<?php endif?>
+	</div>
 	<br>	
 	<div class="container" id="page" class="left">
-		<div class="breadcrumbs">
-			<?php if(isset($this->breadcrumbs)):?>
-				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-					'homeLink'=>CHtml::link('Home', array('/site/index')),
-					'links'=>$this->breadcrumbs,
-				)); ?>
-				<!-- breadcrumbs -->
-			<?php endif?>
-		</div>
 		<?php echo $content; ?>
 	
 		<div class="clear"></div>
 	
-		<div id="footer">
-			<?php echo CHtml::link("Beranda",Yii::app()->baseUrl."/site/index"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<?php echo CHtml::link("Tentang Kami",Yii::app()->baseUrl."/site/about"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<?php echo CHtml::link("FAQ",Yii::app()->baseUrl."/site/faq"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<?php echo CHtml::link("Hubungi Kami",Yii::app()->baseUrl."/site/contact"); ?>
-		</div><!-- footer -->
-	
 	</div><!-- page -->
-
+	
+	<div id="footer">
+		<?php echo CHtml::link("Tentang Kami",Yii::app()->baseUrl."/site/about"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+		<?php echo CHtml::link("FAQ",Yii::app()->baseUrl."/site/faq"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+		<?php echo CHtml::link("Hubungi Kami",Yii::app()->baseUrl."/site/contact"); ?>
+	</div><!-- footer -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var index = 10;
+			$(".breadcrumbs").children().each(function(){
+				$(this).attr('style','z-index:'+index+';position:relative;');
+				index--;
+			});
+		});		
+	</script>
 </body>
 </html>

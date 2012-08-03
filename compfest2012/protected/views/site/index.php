@@ -17,7 +17,7 @@
 		Pengetahuan Umum, dan lain lain. <br>
 		Kalian bisa mengakses seluruh materi dengan gratis. <br>
 		Materi pelajaran akan selalu diupdate oleh Tim Pengajar sehingga kalian tidak perlu takut materi yang kalian pelajari sudah
-		ketinggalan jaman. Tertarik untuk belajar bersama kami?
+		ketinggalan jaman.
 	</div>
 </div>
 <div class="box_pink">

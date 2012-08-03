@@ -2377,3 +2377,79 @@ Stack trace:
 REQUEST_URI=/codeur-de-chevalier/compfest2012/materi/manage
 HTTP_REFERER=http://localhost/codeur-de-chevalier/compfest2012/materi/create_kuliah
 ---
+2012/08/03 19:27:56 [error] [php] Illegal string offset 'href' (C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php:381)
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): MateriController->renderInternal()
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): MateriController->renderFile()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\zii\widgets\CListView.php(242): MateriController->renderPartial()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\zii\widgets\CBaseListView.php(158): CListView->renderItems()
+#4 unknown(0): CListView->renderSection()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#6 C:\xampp\htdocs\compfest2012\yii\framework\zii\widgets\CBaseListView.php(126): CListView->renderContent()
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(174): CListView->run()
+#8 C:\xampp\htdocs\compfest2012\protected\views\materi\index.php(14): MateriController->widget()
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): MateriController->renderInternal()
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): MateriController->renderFile()
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): MateriController->renderPartial()
+#13 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(20): MateriController->render()
+#14 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
+#15 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#16 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): MateriController->runAction()
+#17 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): MateriController->runActionWithFilters()
+#18 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): MateriController->run()
+#19 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#20 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/materi/index
+in C:\xampp\htdocs\compfest2012\protected\views\materi\_view.php (6)
+in C:\xampp\htdocs\compfest2012\protected\views\materi\index.php (14)
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (20)
+2012/08/03 20:00:12 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.getReturnUrl" is not defined.' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\auth\CWebUser.php(141): CComponent->__get('getReturnUrl')
+#1 C:\xampp\htdocs\compfest2012\protected\views\materi\view.php(48): CWebUser->__get('getReturnUrl')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(206): CController->render('view', Array)
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionView()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('view')
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/view')
+#13 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/compfest2012/materi/view/3
+HTTP_REFERER=http://localhost/compfest2012/materi/index
+---
+2012/08/03 20:06:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/back_arrow.png".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/back_arr...')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/images/back_arrow.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/3
+---
+2012/08/03 20:07:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/back_arrow.png".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/back_arr...')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/images/back_arrow.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/3
+---
+2012/08/03 21:36:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('post')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/index.php/post
+HTTP_REFERER=http://localhost/compfest2012/user/login
+---
