@@ -41,7 +41,7 @@ class Template extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_judul, id_text_box, id_icon, background_link', 'required'),
+			array('id_judul, id_text_box, id_icon, background_link, preview_link', 'required'),
 			array('id_judul, id_text_box, id_icon', 'numerical', 'integerOnly'=>true),
 			array('background_link', 'length', 'max'=>40),
 			// The following rule is used by search().
@@ -73,6 +73,7 @@ class Template extends CActiveRecord
 			'id_text_box' => 'Id Text Box',
 			'id_icon' => 'Id Icon',
 			'background_link' => 'Background Link',
+			'preview_link' => 'Preview Link',
 		);
 	}
 

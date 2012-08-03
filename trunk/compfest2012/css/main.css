@@ -1,8 +1,26 @@
-body { margin: 0; padding: 0; color: #555; font: normal 10pt Arial,Helvetica,sans-serif; background: #EFEFEF; }
+body
+{
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font: normal 10pt Arial,Helvetica,sans-serif;
+	background: #EFEFEF;
+}
 
-#page { margin-top: 5px; margin-bottom: 5px;background: white; border: 1px solid #C9E0ED; }
+#page
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background: white;
+	border: 1px solid #C9E0ED;
+}
 
-#header { margin: 0; padding: 0; border-top: 3px solid #C9E0ED; }
+#header
+{
+	margin: 0;
+	padding: 0;
+	border-top: 3px solid #C9E0ED;
+}
 
 #content
 {
@@ -23,17 +41,44 @@ body { margin: 0; padding: 0; color: #555; font: normal 10pt Arial,Helvetica,san
 	border-top: 1px solid #C9E0ED;
 }
 
-#logo { padding: 10px 20px; font-size: 280%; letter-spacing:1px;}
-#motto  { padding-left: 20px; padding-bottom:20px; font-size: 120%; color:#5f5f5f;}
- 
-#mainmenu {width:90px; height:auto; }
-#mainmenu ul { padding:10px; padding-left:0px; margin:0px; }
-#mainmenu ul li { background:white url(bg.gif) repeat left top; margin-top:10px; display: block; width:100px; height:30px;}
-#mainmenu ul li a {color:#ffffff; background-color:transparent; font-size:15px; font-weight:bold; text-decoration:none; padding:10px; 
-		letter-spacing:1px; text-transform:uppercase; line-height:30px;}
-/*
-#mainmenu ul li a:hover, #mainmenu ul li.active a { color: #6399cd; background-color:#EFF4FA; text-decoration:none;}
-*/
+#logo
+{
+	padding: 10px 20px;
+	font-size: 200%;
+}
+
+#mainmenu
+{
+	background:white url(bg.gif) repeat-x left top;
+}
+
+#mainmenu ul
+{
+	padding:6px 20px 5px 20px;
+	margin:0px;
+}
+
+#mainmenu ul li
+{
+	display: inline;
+}
+
+#mainmenu ul li a
+{
+	color:#ffffff;
+	background-color:transparent;
+	font-size:12px;
+	font-weight:bold;
+	text-decoration:none;
+	padding:5px 8px;
+}
+
+#mainmenu ul li a:hover, #mainmenu ul li.active a
+{
+	color: #6399cd;
+	background-color:#EFF4FA;
+	text-decoration:none;
+}
 
 div.flash-error, div.flash-notice, div.flash-success
 {
@@ -182,37 +227,3 @@ div.search-form
 {
 	background: #80CFFF;
 }
-
-/* STYLING
------------------------------------------ */
-.left {float:left;}
-.right {float:right;}
-
-/* LINK BUTTON 
------------------------------------------------------------- */
-.link_orange {background-color:#ec7426; color:#fff; padding-left:10px; padding-right:10px; padding-top:8px; padding-bottom:8px; 
-text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px; cursor:pointer;
--webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
--moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.17);
-box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);
-}
-.link_orange:hover {background-color:#f2902d;text-decoration:none;}
-
-.link_blue {background-color:#007bc1; color:#fff; padding-left:10px; padding-right:10px; padding-top:8px; padding-bottom:8px; 
-text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;border:none;
--webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
--moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.17);
-box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);cursor:pointer;
-}
-.link_blue:hover{background-color:#0092dd;text-decoration:none;}
-
-.link_green {background-color:#b6d150; color:#fff; padding-left:18px; padding-right:18px; padding-top:8px; padding-bottom:8px; text-decoration:none;
--webkit-box-shadow:2px 3px 5px rgba(50,50,50,0.17);-moz-box-shadow:2px 3px 5px rgba(50,50,50,0.17); box-shadow:2px 3px 5px rgba(50,50,50,0.17);
-letter-spacing:1px; font-size:17px;font-weight:bold;cursor:pointer;}
-.link_green:hover {background-color:#d6e15f; text-decoration:none;}
-
-.submit input {background-color:#007bc1; color:#fff; padding-left:10px; padding-right:10px; padding-top:8px; padding-bottom:8px; 
-text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;border:none;
--webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
--moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.17);
-box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);cursor:pointer;}

@@ -42,22 +42,39 @@ class MateriController extends Controller
 		return $this->_model;
 	}
 	
-	public function actionCreate()
+	public function actionCreate_kuliah()
 	{
 		$model = new Materi;
-		
-		if(isset($_POST['Materi']))
+		$model2 = new MateriKuliah;
+		if((isset($_POST['Materi']))&&(isset($_POST['MateriKuliah'])))
 		{
 			$model->attributes=$_POST['Materi'];
-			if($model->save())
+			$model->materi_type=1;
+			$model->type_id=1;
+			$model->template_id=1;
+			$model2->attributes=$_POST['MateriKuliah'];
+			if(($model->save())&&($model2->save()))
 				$this->redirect(array('materi/index'));
 		}
 		
-		$this->render('create',array(
+		$this->render('create_kuliah',array(
 			'model'=>$model,
+			'model2'=>$model2,
 		));
 	}
 	
+	public function actionChange_template()
+	{
+		//$model = $this->loadModel();
+		$model = new Materi;
+		$template = Template::model()->findAll();
+		
+		$this->render('changetemplate',array(
+			'model'=>$model,
+			'template'=>$template,
+		));
+	}
+		
 	// Uncomment the following methods and override them if needed
 	/*
 	public function filters()

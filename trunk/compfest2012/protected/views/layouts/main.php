@@ -13,11 +13,16 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
+	
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery.js" type="text/javascript"></script>
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-ui-1.8.22.custom.min.js" type="text/javascript"></script>
+	
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
 <body>
+
 	<div id="mainmenu" class="left">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
@@ -31,7 +36,7 @@
 		)); ?>
 	</div>
 	<!-- mainmenu -->
-
+	
 	<div class="container" id="page" class="left">
 
 		<div id="header">
@@ -46,24 +51,23 @@
 			</div>
 		</div>
 		<!-- header -->
-
+	
 		<?php if(isset($this->breadcrumbs)):?>
 			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 				'links'=>$this->breadcrumbs,
 			)); ?><!-- breadcrumbs -->
 		<?php endif?>
-
+	
 		<?php echo $content; ?>
-
+	
 		<div class="clear"></div>
-
+	
 		<div id="footer">
 			Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
 			All Rights Reserved.<br/>
 			<?php echo Yii::powered(); ?>
-		</div>
-		<!-- footer -->
-
+		</div><!-- footer -->
+	
 	</div><!-- page -->
 
 </body>

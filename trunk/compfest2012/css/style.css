@@ -1,0 +1,59 @@
+#outer_container
+{
+	overflow:hidden;
+}
+
+#inner_container
+{
+	width:10000px;
+}
+
+.item
+{
+	width:300px;
+	height:180px;
+	background-color:yellow;
+	float:left;
+	margin-left:10px;
+	margin-right:10px;
+	margin-top:10px;
+}
+
+.choosen
+{
+	border: 1px solid black;
+}
+
+/* STYLING
+----------------------------------------- */
+.left {float:left;}
+.right {float:right;}
+
+/* LINK BUTTON 
+------------------------------------------------------------ */
+.link_orange {background-color:#ec7426; color:#fff; padding-left:10px; padding-right:10px; padding-top:8px; padding-bottom:8px; 
+text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px; cursor:pointer;
+-webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
+-moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.17);
+box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);
+}
+.link_orange:hover {background-color:#f2902d;text-decoration:none;}
+
+.link_blue {background-color:#007bc1; color:#fff; padding-left:10px; padding-right:10px; padding-top:8px; padding-bottom:8px; 
+text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;border:none;
+-webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
+-moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.17);
+box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);cursor:pointer;
+}
+.link_blue:hover{background-color:#0092dd;text-decoration:none;}
+
+.link_green {background-color:#b6d150; color:#fff; padding-left:18px; padding-right:18px; padding-top:8px; padding-bottom:8px; text-decoration:none;
+-webkit-box-shadow:2px 3px 5px rgba(50,50,50,0.17);-moz-box-shadow:2px 3px 5px rgba(50,50,50,0.17); box-shadow:2px 3px 5px rgba(50,50,50,0.17);
+letter-spacing:1px; font-size:17px;font-weight:bold;cursor:pointer;}
+.link_green:hover {background-color:#d6e15f; text-decoration:none;}
+
+.submit input {background-color:#007bc1; color:#fff; padding-left:10px; padding-right:10px; padding-top:8px; padding-bottom:8px; 
+text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;border:none;
+-webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.17);
+-moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.17);
+box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);cursor:pointer;}

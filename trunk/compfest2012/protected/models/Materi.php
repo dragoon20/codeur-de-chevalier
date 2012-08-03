@@ -57,7 +57,6 @@ class Materi extends CActiveRecord
 			if($this->isNewRecord)
 			{
 				$this->create_time=$this->update_time=time();
-				$this->materi_type=0;
 				$this->user_id=Yii::app()->user->id;
 			}
 			else
