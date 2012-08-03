@@ -4,12 +4,14 @@
 			<?php
 				foreach($template as $temp)
 				{
+					echo '<a href="javascript:choose('.$temp->id_template.')">';
 					echo '<div class="item';
 					if ($model->template_id == $temp->id_template)
 						echo ' choosen';
 					echo '" style="height:180px; background-color:yellow; width:300px;">';
-					echo '<img src="'.$temp->preview_link.'" onclick="choose('.$temp->id_template.')"/>';
+					echo '<img id="preview_'.$temp->id_template.'" src="'.$temp->preview_link.'"/>';
 					echo '</div>';
+					echo '</a>';
 				}
 			?>
 		</div>
@@ -20,7 +22,7 @@
 </div>
 <div class="form">
 	<?php echo CHtml::beginForm(); ?>
-		<input id="choosen" type="hidden" value="<?php $model->template_id ?>"></input>
+		<input id="choosen" name="template_id" type="hidden" value="<?php $model->template_id ?>"></input>
 		<div class="row submit">
 			<?php echo CHtml::submitButton('Pilih'); ?>
 		</div>
@@ -117,14 +119,12 @@
 			bindMouseUp();
 		});
 		
-		function choose(i) {
-			alert("A");
-			$(".item").removeClass('choosen');
-			var src = $(this).children("img").attr("src");
-			$("#choosen").val(i);
-			$(this).addClass('choosen');
-			$("#image").children("img").attr("src",src);
-		};
-		
 	});
+	function choose(i) {
+		$(".item").removeClass('choosen');
+		var src = $("#preview_"+i).attr("src");
+		$("#choosen").val(i);
+		$(this).addClass('choosen');
+		$("#image").children("img").attr("src",src);
+	};
 </script>
