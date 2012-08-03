@@ -41,11 +41,12 @@
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
 				array('label'=>'Beranda', 'url'=>array('/site/index')),
+				array('label'=>'Materi', 'url'=>array('/materi/index')),
 				//array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Masuk', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Daftar', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Bikin Materi Kuliah', 'url'=>array('/materi/create_kuliah'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Bikin Materi Kuliah', 'url'=>array('/materi/create_kuliah'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==1),
 				array('label'=>'Keluar ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
