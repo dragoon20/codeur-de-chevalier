@@ -70,5 +70,4 @@ text-decoration:none;border-radius:20px;-webkit-border-radius:20px;-moz-border-r
 box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.17);}
 .submit input:hover {background-color:#0092dd;text-decoration:none;}
 
-.pertanyaan {}
-.jawaban {}
+.jawaban {background-color:#7fc9e2;width:100%;color:#fff;margin-top:10px;}
