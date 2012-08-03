@@ -55,13 +55,15 @@
 	
 	<br>	
 	<div class="container" id="page" class="left">
-		<?php if(isset($this->breadcrumbs)):?>
-			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-				'homeLink'=>CHtml::link('Home', array('/materi/index')),
-				'links'=>$this->breadcrumbs,
-			)); ?><!-- breadcrumbs -->
-		<?php endif?>
-	
+		<div class="breadcrumbs">
+			<?php if(isset($this->breadcrumbs)):?>
+				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+					'homeLink'=>CHtml::link('Home', array('/materi/index')),
+					'links'=>$this->breadcrumbs,
+				)); ?>
+				<!-- breadcrumbs -->
+			<?php endif?>
+		</div>
 		<?php echo $content; ?>
 	
 		<div class="clear"></div>
