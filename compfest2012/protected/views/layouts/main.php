@@ -46,7 +46,8 @@
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Masuk', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Daftar', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Bikin Materi Kuliah', 'url'=>array('/materi/create_kuliah'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==1),
+				array('label'=>'Bikin Materi Kuliah', 'url'=>array('/materi/create_kuliah'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
+				array('label'=>'Edit Materi Kuliah', 'url'=>array('/materi/manage'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
 				array('label'=>'Keluar ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>

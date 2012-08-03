@@ -1971,3 +1971,60 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/compfest2012/images/lid.png
 ---
+2012/08/03 09:29:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manage/`1".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('manage/`1')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/manage/%601
+---
+2012/08/03 09:29:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manage/2".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('manage/2')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/manage/2
+---
+2012/08/03 09:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(57): MateriController->loadModel()
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionChange_template()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('change_template')
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/change_t...')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/compfest2012/materi/change_template/testes
+HTTP_REFERER=http://localhost/compfest2012/materi/change_template/2
+---
+2012/08/03 09:35:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "change_data".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('change_data')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('change_data')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/change_d...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/change_data/2
+HTTP_REFERER=http://localhost/compfest2012/materi/manage
+---
+2012/08/03 09:36:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php:29
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(57): MateriController->loadModel()
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionChange_template()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('change_template')
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/change_t...')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/compfest2012/materi/change_template/testes
+HTTP_REFERER=http://localhost/compfest2012/materi/change_template/2
+---
