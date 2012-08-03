@@ -22,7 +22,21 @@
 </head>
 
 <body>
-
+	
+	<div id="header">
+		<div id="logo">
+			<!-- <?php echo CHtml::encode(Yii::app()->name); ?> -->
+			<span style="color:#33c7c7;">D</span><span style="color:#ff6a9a;">U</span><span style="color:#feca65;">N</span><span style="color:#67cb99;">I</span><span style="color:#ff6431;">A</span>
+			<span style="color:#9e6ca1;">A</span><span style="color:#fd9bce;">N</span><span style="color:#5f5f5f;">A</span><span style="color:#31ce65;">K</span>
+			<span style="color:#ff642f;">C</span><span style="color:#ff999d;">E</span><span style="color:#64cccb;">R</span><span style="color:#fc9836;">D</span><span style="color:#936594;">A</span><span style="color:#46c2ca;">S</span>
+		</div>
+		<div id="motto">
+			Belajar apapun, dimanapun dan kapanpun kamu mau.
+		</div>
+	</div>
+	<!-- header -->
+	
+	<br><br>
 	<div id="mainmenu" class="left">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
@@ -38,21 +52,9 @@
 	</div>
 	<!-- mainmenu -->
 	
-	<div class="container" id="page" class="left">
-
-		<div id="header">
-			<div id="logo">
-				<!-- <?php echo CHtml::encode(Yii::app()->name); ?> -->
-				<span style="color:#33c7c7;">D</span><span style="color:#ff6a9a;">U</span><span style="color:#feca65;">N</span><span style="color:#67cb99;">I</span><span style="color:#ff6431;">A</span>
-				<span style="color:#9e6ca1;">A</span><span style="color:#fd9bce;">N</span><span style="color:#5f5f5f;">A</span><span style="color:#31ce65;">K</span>
-				<span style="color:#ff642f;">C</span><span style="color:#ff999d;">E</span><span style="color:#64cccb;">R</span><span style="color:#fc9836;">D</span><span style="color:#936594;">A</span><span style="color:#46c2ca;">S</span>
-			</div>
-			<div id="motto">
-				Belajar apapun, dimanapun dan kapanpun kamu mau.
-			</div>
-		</div>
-		<!-- header -->
 	
+	<br>	
+	<div class="container" id="page" class="left">
 		<?php if(isset($this->breadcrumbs)):?>
 			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
 				'homeLink'=>CHtml::link('Home', array('/materi/index')),
