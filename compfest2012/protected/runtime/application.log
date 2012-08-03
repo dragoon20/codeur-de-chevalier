@@ -2343,3 +2343,37 @@ Stack trace:
 REQUEST_URI=/codeur-de-chevalier/compfest2012/materi/manage
 HTTP_REFERER=http://localhost/codeur-de-chevalier/compfest2012/materi/create_kuliah
 ---
+2012/08/03 17:30:31 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `materi` `t` WHERE user_id=5.
+in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\views\materi\manage.php (9)
+in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\controllers\MateriController.php (147)
+in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\index.php (13)
+2012/08/03 17:30:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'user_id' in 'where clause'. The SQL statement executed was: SELECT COUNT(*) FROM `materi` `t` WHERE user_id=5' in C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\db\ar\CActiveRecord.php(1536): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#7 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\zii\widgets\CListView.php(173): CBaseListView->init()
+#8 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CBaseController.php(148): CListView->init()
+#9 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\views\materi\manage.php(9): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(783): CController->renderPartial('manage', Array, true)
+#15 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\protected\controllers\MateriController.php(147): CController->render('manage', Array)
+#16 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionManage()
+#17 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('manage')
+#21 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/manage')
+#22 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\codeur-de-chevalier\compfest2012\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/codeur-de-chevalier/compfest2012/materi/manage
+HTTP_REFERER=http://localhost/codeur-de-chevalier/compfest2012/materi/create_kuliah
+---
