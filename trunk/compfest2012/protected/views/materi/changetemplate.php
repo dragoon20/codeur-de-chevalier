@@ -1,15 +1,20 @@
 <hr />
 	<div id="outer_container" style="width:800px; height:200px; margin:auto;">
-		<div id="inner_container" style="height:200px; background-color:blue;">
+		<div id="inner_container" style="height:200px;">
 			<?php
+				$i = 0;
 				foreach($template as $temp)
 				{
+					$i++;
 					echo '<a href="javascript:choose('.$temp->id_template.')">';
 					echo '<div class="item';
 					if ($model->template_id == $temp->id_template)
+					{
 						echo ' choosen';
+						$src = Yii::app()->baseUrl."/images/preview/".$temp->preview_link;
+					}
 					echo '" style="height:180px; background-color:yellow; width:300px;">';
-					echo '<img id="preview_'.$temp->id_template.'" src="'.$temp->preview_link.'"/>';
+					echo '<img id="preview_'.$temp->id_template.'" src="'.Yii::app()->baseUrl."/images/preview/".$temp->preview_link.'" style="height:180px; width:300px;"/>';
 					echo '</div>';
 					echo '</a>';
 				}
@@ -17,8 +22,8 @@
 		</div>
 	</div>
 <hr />
-<div id="image" style="width:600px; height:400px; background-color:green; margin:auto;">
-	<img />
+<div id="image" style="width:600px; height:400px; margin:auto;">
+	<img style="width:600px; height:400px;" src = "<?php echo $src; ?>"/>
 </div>
 <div class="form">
 	<?php echo CHtml::beginForm(); ?>
@@ -32,11 +37,11 @@
 	$(document).ready(function ()
 	{
 		var left = 0;
-		var post_awal = $("#inner_container").position().left;
+		var post_awal =0;
 		var cont_post = $("#inner_container").position();
 		var items_width = $(".item").width();
-		var items = $("#inner_container > div.item").length;
-		var post_akhir = (post_awal + (items-3)*(items_width))*-1;
+		var items = <?php echo $i; ?>;
+		var post_akhir = (post_awal + (items-2)*(items_width))*-1;
 		var cont_post_temp;
 		
 		$("#inner_container").draggable({axis:"x", revert:true});
@@ -49,14 +54,14 @@
 			{
 				// swipe to right
 				$("#inner_container").draggable("option","revert",false);
-				var moveLeft = Math.abs(cont_post.left - cont_post_temp);
+				var moveLeft = Math.abs(cont_post.left - cont_post_temp);				
 				if (left-moveLeft < post_akhir)
 				{
 					moveLeft = Math.abs(cont_post_temp - post_akhir);
 					left = post_akhir;
 					$("#inner_container").animate(
 					{
-						left: '+=' + moveLeft
+						left: post_akhir+'px'
 					},500, function() {
 						$("#inner_container").draggable("option","revert",true);
 						cont_post = $("#inner_container").position();
@@ -81,13 +86,13 @@
 				// swipe to left
 				$("#inner_container").draggable("option","revert",false);
 				var moveLeft = Math.abs(cont_post_temp - cont_post.left);
-				if (left+moveLeft >= post_awal)
+				if (left+moveLeft >= 0)
 				{
 					moveLeft = Math.abs(post_awal - cont_post_temp);
-					left = post_awal;
+					left = 0;
 					$("#inner_container").animate(
 					{
-						left: '-=' + moveLeft
+						left: '0px'
 					},500, function() {
 						$("#inner_container").draggable("option","revert",true);
 						cont_post = $("#inner_container").position();
@@ -96,7 +101,7 @@
 				}
 				else
 				{
-					left = cont_post_temp + moveLeft;
+					left += moveLeft*2;
 					$("#inner_container").animate(
 					{
 						left: '+=' + moveLeft

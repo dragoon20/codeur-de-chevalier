@@ -25,15 +25,6 @@
 	
 		<?php echo $content; ?>
 	
-		<div class="clear"></div>
-	
-		<div id="footer">
-			<a href="#"> Beranda </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#">Tentang Kami </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#">FAQ </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#">Hubungi Kami </a>
-		</div><!-- footer -->
-	
 
 </body>
 </html>

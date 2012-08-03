@@ -43,7 +43,7 @@ class MateriController extends Controller
 			$model->template_id=1;
 			$model2->attributes=$_POST['MateriKuliah'];
 			if(($model->save())&&($model2->save()))
-				$this->redirect(array('materi/index'));
+				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		
 		$this->render('create_kuliah',array(
@@ -52,17 +52,37 @@ class MateriController extends Controller
 		));
 	}
 	
+	public function actionChange_data_kuliah()
+	{
+		$model = $this->loadModel();
+		$model2 = MateriKuliah::model()->findByPk($model->type_id,'');
+	
+		if((isset($_POST['Materi']))&&(isset($_POST['MateriKuliah'])))
+		{
+			$model->attributes=$_POST['Materi'];
+			$model->materi_type=1;
+			$model->type_id=1;
+			$model2->attributes=$_POST['MateriKuliah'];
+			if(($model->save())&&($model2->save()))
+				$this->redirect(Yii::app()->user->returnUrl);
+		}
+	
+		$this->render('update_kuliah',array(
+				'model'=>$model,
+				'model2'=>$model2,
+		));
+	}
+	
 	public function actionChange_template()
 	{
 		$model = $this->loadModel();
-		//$model = new Materi;
 		$template = Template::model()->findAll();
 		
 		if (ISSET($_POST['template_id']))
 		{
 			$model->template_id=$_POST['template_id'];
 			if ($model->save())
-				$this->redirect(array('materi/index'));
+				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		
 		$this->render('changetemplate',array(
@@ -71,10 +91,25 @@ class MateriController extends Controller
 		));
 	}
 	
+	public function actionManage()
+	{
+		$dataProvider=new CActiveDataProvider('Materi', array(
+					'criteria'=>array(
+						'condition'=>'user_id='.Yii::app()->user->id,
+						'order'=>'update_time DESC'
+					),	
+					'pagination'=>array(
+						'pageSize'=>5,
+					),));
+					
+		$this->render('manage',array(
+			'dataProvider'=>$dataProvider,
+		));
+	}
+	
 	public function actionView()
 	{
 		$model = $this->loadModel();
-		//$model = new Materi;
 		$isi = MateriKuliah::model()->findByPk($model->type_id,'');
 		$template = Template::model()->findByPk($model->template_id, '');
 		$this->layout = '//layouts/viewmateri';
