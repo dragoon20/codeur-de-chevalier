@@ -2,7 +2,7 @@
 
 <div style="font-size:20px;" class="link_red"> Selamat datang di Dunia Anak Cerdas! </div>
 <br>
-<div style="font-size:14px;"> 
+<div style="font-size:15px;"> 
 	Disini, kamu bisa belajar berbagai hal dengan cara yang menyenangkan. Kamu tidak butuh buku, alat tulis, dan tidak perlu takut
 	terlambat masuk sekolah karena di Dunia Anak Cerdas, kamu bisa belajar apapun, dimanapun, dan kapanpun kamu mau. 
 	Tunggu apa lagi, ayo daftarkan dirimu sekarang dan jadilah bagian dari Anak Cerdas Indonesia!
@@ -49,11 +49,11 @@
 	<div style="font-size:20px;letter-spacing:1px;margin-top:10px; font-weight:bold;text-align:center;"> TESTIMONI </div>
 	<img style="float:left;width:200px; margin-left:10px; margin-top:20px;" src="<?php echo Yii::app()->request->baseUrl?>/images/blackboard.jpg"> 
 	<div class="left" style="margin-top:20px; width:200px; margin-left:15px;"> 
-		"This educational programme restyle with real life concepts from the world of sports especially cricket. This unique fun learning methodology will surely help students to understand different concepts in Maths and Science and will be of great help to them." <br>
-		-- Mrs. Sheela Rajendra
+		"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " <br>
+		-- Excepteur sint
 		<br><br>
-		"akjdflajdkfjakldjfakjdflka" <br>
-		-- LALALA
+		"Excepteur sint occaecat cupidatat non proident." <br>
+		-- Ut enim
 	</div>
 </div>
 <div class="clear"> </div>
