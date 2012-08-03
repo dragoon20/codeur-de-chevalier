@@ -6,3 +6,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # otherwise forward it to index.php
 RewriteRule . index.php
+
+php_value post_max_size 30M
+php_value upload_max_filesize 18M
+php_value max_execution_time 500

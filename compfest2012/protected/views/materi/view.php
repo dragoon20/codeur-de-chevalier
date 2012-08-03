@@ -3,7 +3,19 @@
 		<?php echo $model->judul; ?>
 	</div>
 	<div id="materi_kuliah">
-		<?php echo $isi->isi_kuliah; ?>
+		<?php 
+			if ($model->materi_type==1)
+			{
+				echo "<div style='width:600px; height:400px;'>";
+				echo $isi->isi_kuliah; 
+				echo "</div>";
+			}
+			else if ($model->materi_type==2)
+			{
+				echo '<iframe src="http://docs.google.com/gview?url='.$isi->link_pp.'&embedded=true" style="width:600px; height:400px;" frameborder="0">';
+				echo "</iframe>";
+			}
+		?>
 	</div>
 	<div id="robot">
 		<canvas id="myCanvas" width="300" height="380">
