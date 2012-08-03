@@ -32,15 +32,10 @@ body
 	padding: 20px 20px 20px 0;
 }
 
-#footer
-{
-	padding: 10px;
-	margin: 10px 20px;
-	font-size: 0.8em;
-	text-align: center;
-	border-top: 1px solid #C9E0ED;
-}
-
+#footer { padding: 20px; margin: 10px 20px; font-size: 1.1em; text-align:center; border-top: 1px solid #C9E0ED; 
+	background-color:#cce0eb; color:#fff; font-weight:bold; text-transform:uppercase;}
+#footer a {text-decoration:none;color:#fff;}
+#footer a:hover {color:#66a3c4;}
 #logo {padding: 10px 20px; font-size: 300%; letter-spacing:2px; }
 #motto { padding-left:20px; padding-bottom:20px;font-size: 120%; color:#5f5f5f;}
 #mainmenu { width:120px; display:block; }

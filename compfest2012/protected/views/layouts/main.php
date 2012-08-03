@@ -63,9 +63,11 @@
 		<div class="clear"></div>
 	
 		<div id="footer">
-			Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
-			All Rights Reserved.<br/>
-			<?php echo Yii::powered(); ?>
+				<a href="#"> Beranda </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="#">Tentang Kami </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="#">FAQ </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+				<a href="#">Hubungi Kami </a>
+			
 		</div><!-- footer -->
 	
 	</div><!-- page -->
