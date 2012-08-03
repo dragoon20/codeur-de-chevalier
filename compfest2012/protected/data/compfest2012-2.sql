@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `compfest2012-2`
 --
+DROP DATABASE `compfest2012-2`;
 CREATE DATABASE `compfest2012-2` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
 USE `compfest2012-2`;
 
