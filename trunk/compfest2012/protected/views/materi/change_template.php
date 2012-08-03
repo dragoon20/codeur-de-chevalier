@@ -1,3 +1,10 @@
+<?php
+$this->breadcrumbs=array(
+	'Materi'=>array('index'),
+	'Edit'=>array('manage'),
+	'Ubah Template',
+);
+?>
 <hr />
 	<div id="outer_container" style="width:800px; height:200px; margin:auto;">
 		<div id="inner_container" style="height:200px;">
@@ -25,7 +32,7 @@
 <div id="image" style="width:600px; height:400px; margin:auto;">
 	<img style="width:600px; height:400px;" src = "<?php echo $src; ?>"/>
 </div>
-<div class="form">
+<div class="form" style="width:100px;margin: auto; margin-top:20px;">
 	<?php echo CHtml::beginForm(); ?>
 		<input id="choosen" name="template_id" type="hidden" value="<?php $model->template_id ?>"></input>
 		<div class="row submit">

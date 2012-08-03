@@ -1,3 +1,10 @@
+<?php
+$this->pageTitle=Yii::app()->name . ' - FAQ';
+$this->breadcrumbs=array(
+	'FAQ',
+);
+?>
+
 <div class="link_red">
 	Apa itu Dunia Anak Cerdas?
 </div>

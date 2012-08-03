@@ -17,8 +17,8 @@ $this->breadcrumbs=array(
 
 <?php endif; ?>
 
-<div class="left" style="margin-top:-50px;margin-left:30px;">
-	<img style="float:right;" src="<?php echo Yii::app()->request->baseUrl?>/images/kidsart.gif">
+<div class="left" style="margin-left:30px;">
+	<img style="width:400px;" src="<?php echo Yii::app()->request->baseUrl?>/images/kidsart.gif">
 </div>
 
 <div class="form left" style="margin-left:70px; width:350px;">

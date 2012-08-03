@@ -1,5 +1,5 @@
 <div class="materi">
-	<div class="link_blue right">
+	<div class="link_blue right" style="margin-top:15px; margin-right:15px;">
 		<?php
 			if ($data->materi_type==1)
 			{
@@ -11,7 +11,7 @@
 			} 
 		?>
 	</div>
-	<div class="link_blue right">
+	<div class="link_blue right" style="margin-top:15px; margin-right:10px;">
 		<?php echo CHtml::link("Ubah Template","change_template/".$data->materi_id); ?>
 	</div>
 	
