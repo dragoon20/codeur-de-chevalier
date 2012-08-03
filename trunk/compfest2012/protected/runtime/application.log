@@ -2028,3 +2028,231 @@ Stack trace:
 REQUEST_URI=/compfest2012/materi/change_template/testes
 HTTP_REFERER=http://localhost/compfest2012/materi/change_template/2
 ---
+2012/08/03 11:42:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compfest2012-2.uploadpp' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `UploadPP`.
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (61)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:42:40 [error] [exception.CDbException] exception 'CDbException' with message 'The table "UploadPP" for active record class "UploadPP" cannot be found in the database.' in C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(UploadPP))
+#1 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('UploadPP')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(61): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('create_pp')
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/create_p...')
+#10 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/compfest2012/materi/create_pp
+---
+2012/08/03 11:43:46 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compfest2012-2.{{upload}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{upload}}`.
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (61)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:43:46 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{upload}}" for active record class "UploadPP" cannot be found in the database.' in C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(UploadPP))
+#1 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('UploadPP')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(61): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('create_pp')
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/create_p...')
+#10 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/compfest2012/materi/create_pp
+---
+2012/08/03 11:43:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compfest2012-2.{{upload}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{upload}}`.
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (61)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:43:49 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{upload}}" for active record class "UploadPP" cannot be found in the database.' in C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(UploadPP))
+#1 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('UploadPP')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(61): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('create_pp')
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/create_p...')
+#10 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/compfest2012/materi/create_pp
+---
+2012/08/03 11:43:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'compfest2012-2.{{upload}}' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `{{upload}}`.
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (61)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:43:59 [error] [exception.CDbException] exception 'CDbException' with message 'The table "{{upload}}" for active record class "UploadPP" cannot be found in the database.' in C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php:2264
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(379): CActiveRecordMetaData->__construct(Object(UploadPP))
+#1 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(394): CActiveRecord::model('UploadPP')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(78): CActiveRecord->getMetaData()
+#3 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(61): CActiveRecord->__construct()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('create_pp')
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/create_p...')
+#10 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/compfest2012/materi/create_pp
+---
+2012/08/03 11:44:36 [error] [php] Undefined variable: form (C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): MateriController->renderFile()
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): MateriController->renderPartial()
+#2 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(88): MateriController->render()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): MateriController->runAction()
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): MateriController->runActionWithFilters()
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): MateriController->run()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/materi/create_pp
+in C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php (14)
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (88)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:49:30 [error] [php] Object of class Materi could not be converted to string (C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php:1712)
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php(567): inputField()
+#1 C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php(18): textField()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): MateriController->renderInternal()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): MateriController->renderFile()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): MateriController->renderPartial()
+#6 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(88): MateriController->render()
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): MateriController->runAction()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): MateriController->runActionWithFilters()
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): MateriController->run()
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/materi/create_pp
+in C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php (18)
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (88)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:50:50 [error] [php] Object of class Materi could not be converted to string (C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php:1712)
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php(567): inputField()
+#1 C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php(18): textField()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): MateriController->renderInternal()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): MateriController->renderFile()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): MateriController->renderPartial()
+#6 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(88): MateriController->render()
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): MateriController->runAction()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): MateriController->runActionWithFilters()
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): MateriController->run()
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/materi/create_pp
+in C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php (18)
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (88)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:51:26 [error] [php] Object of class Materi could not be converted to string (C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php:1712)
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php(567): inputField()
+#1 C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php(18): textField()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): MateriController->renderInternal()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): MateriController->renderFile()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): MateriController->renderPartial()
+#6 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(88): MateriController->render()
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): MateriController->runAction()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): MateriController->runActionWithFilters()
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): MateriController->run()
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/materi/create_pp
+in C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php (18)
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (88)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 11:52:58 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php:85)
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php(140): renderAttributes()
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php(1123): tag()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\helpers\CHtml.php(567): inputField()
+#3 C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php(18): textField()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): MateriController->renderInternal()
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): MateriController->renderFile()
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): MateriController->renderPartial()
+#8 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(88): MateriController->render()
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): MateriController->runAction()
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): MateriController->runActionWithFilters()
+#13 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): MateriController->run()
+#14 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/materi/create_pp
+in C:\xampp\htdocs\compfest2012\protected\views\materi\create_pp.php (18)
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (88)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 12:01:45 [error] [php] move_uploaded_file(C:\xampp\htdocs\compfest2012\protected/../images/Slides/energy.ppt): failed to open stream: No such file or directory (C:\xampp\htdocs\compfest2012\yii\framework\web\CUploadedFile.php:197)
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): MateriController->runAction()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): MateriController->runActionWithFilters()
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): MateriController->run()
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#6 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\compfest2012\index.php(13): CWebApplication->run()
+REQUEST_URI=/compfest2012/materi/create_pp
+in C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php (70)
+in C:\xampp\htdocs\compfest2012\index.php (13)
+2012/08/03 12:02:14 [error] [exception.CException] exception 'CException' with message 'Property "Materi.power_point" is not defined.' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\db\ar\CActiveRecord.php(144): CComponent->__get('power_point')
+#1 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(73): CActiveRecord->__get('power_point')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionCreate_pp()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('create_pp')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/create_p...')
+#8 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/compfest2012/materi/create_pp
+HTTP_REFERER=http://localhost/compfest2012/materi/create_pp
+---
+2012/08/03 12:28:09 [error] [exception.CException] exception 'CException' with message 'Property "CActiveDataProvider.order" is not defined.' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CActiveDataProvider.php(84): CComponent->__set('order', 'update_time DES...')
+#1 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(14): CActiveDataProvider->__construct('Materi', Array)
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/index')
+#8 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/compfest2012/materi/index
+HTTP_REFERER=http://localhost/compfest2012/materi/index
+---

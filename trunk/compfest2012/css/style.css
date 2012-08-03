@@ -24,6 +24,28 @@
 	border: 1px solid black;
 }
 
+/* Materi */
+.materi
+{
+	background-color:gray;
+	border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;
+	margin-bottom: 10px;
+}
+.datebox
+{
+	color: cyan;
+	margin-right: 30px;
+	padding-bottom: 10px;
+}
+.title,.entry
+{
+	margin-left: 30px;
+}
+.title
+{
+	padding-top: 10px;
+}
+
 /* STYLING
 ----------------------------------------- */
 .left {float:left;}

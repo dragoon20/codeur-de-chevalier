@@ -1,25 +1,29 @@
 <div class="materi">
-	<div class="title">
-		<div class="datebox">
-			<span class="month"><?php echo date('M',$data->update_time); ?></span>
-			<span class="date"><?php echo date('d',$data->update_time); ?></span>
-		</div>
-		<h2><?php echo CHtml::encode($data->judul);
-			  $profile=Profiles::model()->findByAttributes(array('user_id'=>$data->user_id));
-		?></h2>
+	<div class="link_blue right">
+		<?php echo CHtml::link("Ubah Data","change_data_kuliah/".$data->materi_id); ?>
+	</div>
+	<div class="link_blue right">
+		<?php echo CHtml::link("Ubah Template","change_template/".$data->materi_id); ?>
 	</div>
 	
-	<div class="cover">
-		<div class="entry">
-			<?php
-				$this->beginWidget('CMarkdown', array('purifyOutput'=>true));
-				echo $data->deskripsi;
-				$this->endWidget();
-			?>
-		</div>
-		<div class="clear"></div>
+	<div class="title">
+		<h1><?php echo CHtml::link(CHtml::encode($data->judul), "view/".$data->materi_id);
+			  $profile=Profiles::model()->findByAttributes(array('user_id'=>$data->user_id));
+		?>
+		</h1>
 	</div>
-	<?php echo CHtml::link("Ubah Data","change_data_kuliah/".$data->materi_id); ?>
-	<?php echo CHtml::link("Ubah Template","change_template/".$data->materi_id); ?>
+
+	<div class="entry">
+		<?php
+			$this->beginWidget('CMarkdown', array('purifyOutput'=>true));
+			echo $data->deskripsi;
+			$this->endWidget();
+		?>
+	</div>
+	<div class="datebox right">
+		<?php echo date('H:i:s - D, d F Y',$data->update_time); ?>
+	</div>
+	
+	<div class="clear"></div>
 </div>
 <hr />
