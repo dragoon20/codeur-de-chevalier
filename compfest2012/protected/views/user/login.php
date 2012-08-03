@@ -17,7 +17,11 @@ $this->breadcrumbs=array(
 
 <?php endif; ?>
 
-<div class="form left" style="width:350px; background-color:orange;">
+<div class="left" style="margin-top:-50px;margin-left:30px;">
+	<img style="float:right;" src="<?php echo Yii::app()->request->baseUrl?>/images/kidsart.gif">
+</div>
+
+<div class="form left" style="margin-left:70px; width:350px;">
 <?php echo CHtml::beginForm(); ?>
 	
 	<?php echo CHtml::errorSummary($model); ?>
@@ -35,13 +39,10 @@ $this->breadcrumbs=array(
 		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?> &nbsp;
 		<?php echo CHtml::activeLabel($model,'rememberMe'); ?>
 	</div>
-	<div class="row submit">
+	<div class="row submit" style="float:right; margin-right:80px;">
 		<?php echo CHtml::submitButton('Masuk'); ?>
 	</div>
 	
 <?php echo CHtml::endForm(); ?>
 </div>
 <!-- form -->
-<div class="left" style="width:350px; height:300px; background-color:yellow;">
-	<!-- <img style="float:right;" src="<?php echo Yii::app()->request->baseUrl?>/images/kidsart.gif"> -->
-</div>
