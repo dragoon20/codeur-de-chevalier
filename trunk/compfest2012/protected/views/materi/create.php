@@ -1,10 +1,20 @@
 <?php
 $this->breadcrumbs=array(
-	'Posts'=>array('index'),
-	'Create',
+	'Materi'=>array('index'),
+	'Buat',
 );
 ?>
 
-<h1>Tulis Berita</h1>
+<h1>Buat Materi</h1>
 
-<?php echo $this->renderPartial('_form', array('model'=>$model)); ?>
+<div class="link_blue left">
+<?php
+	echo CHtml::link("Tulis Materi",Yii::app()->baseUrl."/materi/create_kuliah"); 
+?>
+</div>
+
+<div class="link_blue left">
+<?php
+	echo CHtml::link("Upload Slide Materi",Yii::app()->baseUrl."/materi/create_pp"); 
+?>
+</div>

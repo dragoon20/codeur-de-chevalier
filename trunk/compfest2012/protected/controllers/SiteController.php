@@ -32,6 +32,17 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 
+	
+	public function actionAbout()
+	{
+		$this->render('pages/about');
+	}
+	
+	public function actionFaq()
+	{
+		$this->render('pages/faq');
+	}
+	
 	/**
 	 * This is the action to handle external exceptions.
 	 */

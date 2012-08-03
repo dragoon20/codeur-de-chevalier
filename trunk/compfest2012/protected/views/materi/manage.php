@@ -1,3 +1,10 @@
+<?php
+$this->breadcrumbs=array(
+	'Materi'=>array('index'),
+	'Edit',
+);
+?>
+
 <?php 
 	$temp = '_view_manage';
 

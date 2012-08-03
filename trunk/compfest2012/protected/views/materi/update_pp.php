@@ -2,7 +2,7 @@
 $this->breadcrumbs=array(
 	'Materi'=>array('index'),
 	'Buat'=>array('create'),
-	'Upload Slide Materi',
+	'Edit Slide Materi',
 );
 ?>
 
@@ -16,25 +16,25 @@ $this->breadcrumbs=array(
 	
 	<div class="row">
 		<div class="left" style="width:120px;"> <?php echo CHtml::activeLabel($model,'judul'); ?> </div>
-		<div class="left"> <?php echo CHtml::textField('judul','',array('size'=>60,'maxlength'=>128));?> </div>
+		<div class="left"> <?php echo CHtml::textField('judul',$model->judul,array('size'=>60,'maxlength'=>128));?> </div>
 		<div class="left" style="margin-left:8px;"> <?php echo CHtml::error($model,'judul'); ?> </div>
 	</div>
 	<div class="clear"> </div>
 	<div class="row">
 		<div class="left" style="width:120px; "> <?php echo CHtml::activeLabel($model,'deskripsi'); ?> </div>
-		<div class="left"> <?php echo CHtml::textArea('deskripsi','',array('rows'=>4, 'cols'=>70)); ?> </div>
+		<div class="left"> <?php echo CHtml::textArea('deskripsi',$model->deskripsi,array('rows'=>4, 'cols'=>70)); ?> </div>
 		<div class="left" style="margin-left:8px;"><?php echo CHtml::error($model,'deskripsi'); ?> </div>
 	</div>
 	<div class="clear"> </div>
 	
 	<?php 
 		/*
-	<div class="row">
-		<div class="left" style="width:120px; "> <?php echo CHtml::activeLabel($model,'urutan'); ?> </div>
-		<div class="left"> <?php echo CHtml::textField('urutan'); ?> </div>
-		<div class="left" style="margin-left:8px;"><?php echo CHtml::error($model,'urutan'); ?> </div>
-	</div>
-	<div class="clear"> </div>
+		<div class="row">
+			<div class="left" style="width:120px; "> <?php echo CHtml::activeLabel($model,'urutan'); ?> </div>
+			<div class="left"> <?php echo CHtml::textField('urutan',$model->urutan); ?> </div>
+			<div class="left" style="margin-left:8px;"><?php echo CHtml::error($model,'urutan'); ?> </div>
+		</div>
+		<div class="clear"> </div>
 		*/
 	?>
 	

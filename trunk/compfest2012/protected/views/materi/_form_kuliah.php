@@ -20,12 +20,16 @@
 	</div>
 	<div class="clear"> </div>
 	
+	<?php 
+		/*
 	<div class="row">
 		<div class="left" style="width:100px; "> <?php echo $form->label($model,'urutan'); ?> </div>
 		<div class="left"> <?php echo $form->textField($model,'urutan'); ?> </div>
 		<div class="left" style="margin-left:8px;"><?php echo $form->error($model,'urutan'); ?> </div>
 	</div>
 	<div class="clear"> </div>
+		*/
+	?>
 	
 	<div class="row">
 		<div class="left" style="width:100px; "> <?php echo $form->label($model2,'isi_kuliah'); ?> </div>

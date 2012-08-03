@@ -34,6 +34,11 @@ class MateriController extends Controller
 		return $this->_model;
 	}
 	
+	public function actionCreate()
+	{
+		$this->render('create');
+	}
+	
 	public function actionCreate_kuliah()
 	{
 		$model = new Materi;
@@ -42,6 +47,7 @@ class MateriController extends Controller
 		{
 			$model->attributes=$_POST['Materi'];
 			$model->materi_type=1;
+			$model->urutan=1; //$_POST['urutan'];
 			$model->template_id=1;
 			$model2->attributes=$_POST['MateriKuliah'];
 			if ($model2->save())
@@ -63,11 +69,11 @@ class MateriController extends Controller
 		$model = new Materi;
 		$model2 = new UploadPP;
 		
-		if((isset($_POST['judul']))&&(isset($_POST['deskripsi']))&&(isset($_POST['urutan']))&&(isset($_POST['UploadPP'])))
+		if((isset($_POST['judul']))&&(isset($_POST['deskripsi']))&&(isset($_POST['UploadPP'])))
 		{
 			$model->judul=$_POST['judul'];
 			$model->deskripsi=$_POST['deskripsi'];
-			$model->urutan=$_POST['urutan'];
+			$model->urutan=1; //$_POST['urutan'];
 			$model2->attributes=$_POST['UploadPP'];
 			$model2->power_point=CUploadedFile::getInstance($model2,'power_point');
 			$model2->power_point->saveAs(Yii::app()->basePath.'/../images/Slides/'.$model2->power_point->name);
@@ -101,6 +107,7 @@ class MateriController extends Controller
 		if((isset($_POST['Materi']))&&(isset($_POST['MateriKuliah'])))
 		{
 			$model->attributes=$_POST['Materi'];
+			$model->urutan=1; //$_POST['urutan'];
 			$model->materi_type=1;
 			$model2->attributes=$_POST['MateriKuliah'];
 			if(($model->save())&&($model2->save()))
@@ -110,6 +117,41 @@ class MateriController extends Controller
 		$this->render('update_kuliah',array(
 			'model'=>$model,
 			'model2'=>$model2,
+		));
+	}
+	
+	public function actionChange_data_pp()
+	{
+		$model = $this->loadModel();
+		$model2 = new UploadPP;
+	
+		if((isset($_POST['judul']))&&(isset($_POST['deskripsi']))&&(isset($_POST['UploadPP'])))
+		{
+			$model->judul=$_POST['judul'];
+			$model->deskripsi=$_POST['deskripsi'];
+			$model->urutan=1; //$_POST['urutan'];
+			$model2->attributes=$_POST['UploadPP'];
+			$model2->power_point=CUploadedFile::getInstance($model2,'power_point');
+			$model2->power_point->saveAs(Yii::app()->basePath.'/../images/Slides/'.$model2->power_point->name);
+				
+			$model3 = new MateriPp;
+			$model3->link_pp = Yii::app()->baseUrl.'/images/Slides/'.$model2->power_point->name;
+				
+			$model->materi_type=2;
+			$model->template_id=1;
+				
+			if($model3->save())
+			{
+				$model->type_id=$model3->materi_pp_id;
+				if ($model->save())
+					$this->redirect(Yii::app()->user->returnUrl);
+			}
+		}
+	
+	
+		$this->render('update_pp',array(
+				'model'=>$model,
+				'model2'=>$model2,
 		));
 	}
 	
@@ -125,7 +167,7 @@ class MateriController extends Controller
 				$this->redirect(Yii::app()->user->returnUrl);
 		}
 		
-		$this->render('changetemplate',array(
+		$this->render('change_template',array(
 			'model'=>$model,
 			'template'=>$template,
 		));
