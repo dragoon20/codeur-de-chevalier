@@ -31,7 +31,7 @@
 		<?php echo $form->error($model2,'isi_kuliah'); ?>
 	</div>
 
-	<div class="row buttons">
+	<div class="row submit">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Buat' : 'Simpan'); ?>
 	</div>
 

@@ -16,17 +16,6 @@ class MateriController extends Controller
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
-	public function actionView()
-	{
-		$post=$this->loadModel();
-		$comment=$this->newComment($post);
-		
-		$this->render('view',array(
-			'model'=>$post,
-			'comment'=>$comment,
-		));
-	}
 	
 	public function loadModel()
 	{
@@ -65,13 +54,35 @@ class MateriController extends Controller
 	
 	public function actionChange_template()
 	{
-		//$model = $this->loadModel();
-		$model = new Materi;
+		$model = $this->loadModel();
+		//$model = new Materi;
 		$template = Template::model()->findAll();
+		
+		if (ISSET($_POST['template_id']))
+		{
+			$model->template_id=$_POST['template_id'];
+			if ($model->save())
+				$this->redirect(array('materi/index'));
+		}
 		
 		$this->render('changetemplate',array(
 			'model'=>$model,
 			'template'=>$template,
+		));
+	}
+	
+	public function actionView()
+	{
+		$model = $this->loadModel();
+		//$model = new Materi;
+		$isi = MateriKuliah::model()->findByPk($model->type_id,'');
+		$template = Template::model()->findByPk($model->template_id, '');
+		$this->layout = '//layouts/viewmateri';
+
+		$this->render('view',array(
+			'model'=>$model,
+			'template'=>$template,
+			'isi'=>$isi,
 		));
 	}
 		

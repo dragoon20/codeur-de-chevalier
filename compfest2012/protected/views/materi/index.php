@@ -1,7 +1,3 @@
-<?php
-$this->breadcrumbs=array(
-	'Materi',
-);?>
 
 <?php 
 	if (Yii::app()->user->isGuest)

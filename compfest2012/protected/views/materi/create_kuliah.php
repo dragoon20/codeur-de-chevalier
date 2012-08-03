@@ -1,10 +1,10 @@
 <?php
 $this->breadcrumbs=array(
-	'Posts'=>array('index'),
-	'Create',
+	'Materi'=>array('index'),
+	'Create Kuliah',
 );
 ?>
 
-<h1>Tulis Berita</h1>
+<h1>Tulis Materi</h1>
 
 <?php echo $this->renderPartial('_form_kuliah', array('model'=>$model,'model2'=>$model2)); ?>

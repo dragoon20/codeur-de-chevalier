@@ -65,7 +65,7 @@ class UserController extends Controller
 								UserModule::sendMail($model->email,UserModule::t("You registered from {site_name}",array('{site_name}'=>Yii::app()->name)),UserModule::t("Please activate you account go to {activation_url}",array('{activation_url}'=>$activation_url)));
 							}*/
 							
-							Yii::app()->user->setFlash('registration',"Thank you for your registration. Welcome to KMB Dhammanano ITB. You can login now.");
+							Yii::app()->user->setFlash('registration',"Terima kasih Anda telah mendaftarkan diri menjadi murid DUNIA ANAK CERDAS. Gunakan Nama Pengguna dan Sandi untuk masuk ke dalam situs dan selamat belajar.");
 								$this->refresh();
 						}
 					} else $profile->validate();

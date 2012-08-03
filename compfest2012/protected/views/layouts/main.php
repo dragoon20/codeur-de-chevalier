@@ -31,6 +31,7 @@
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Masuk', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Daftar', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Bikin Materi Kuliah', 'url'=>array('/materi/create_kuliah'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Keluar ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
@@ -54,6 +55,7 @@
 	
 		<?php if(isset($this->breadcrumbs)):?>
 			<?php $this->widget('zii.widgets.CBreadcrumbs', array(
+				'homeLink'=>CHtml::link('Home', array('/materi/index')),
 				'links'=>$this->breadcrumbs,
 			)); ?><!-- breadcrumbs -->
 		<?php endif?>
@@ -63,11 +65,10 @@
 		<div class="clear"></div>
 	
 		<div id="footer">
-				<a href="#"> Beranda </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-				<a href="#">Tentang Kami </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-				<a href="#">FAQ </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-				<a href="#">Hubungi Kami </a>
-			
+			<a href="#"> Beranda </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="#">Tentang Kami </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="#">FAQ </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<a href="#">Hubungi Kami </a>
 		</div><!-- footer -->
 	
 	</div><!-- page -->
