@@ -4,14 +4,13 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1><?php echo "Daftar"; ?></h1>
+<div style="padding-bottom:15px; font-size:18px; color:#46c2ca;"> <?php echo "Mendaftarkan diri menjadi murid DUNIA ANAK CERDAS"; ?> </div>
 
 <?php if(Yii::app()->user->hasFlash('registration')): ?>
 <div class="success">
 <?php echo Yii::app()->user->getFlash('registration'); ?>
 </div>
 <?php else: ?>
-
 <div class="form">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'registration-form',
@@ -26,29 +25,31 @@ $this->breadcrumbs=array(
 	<?php echo $form->errorSummary(array($model,$profile));?>
 	
 	<div class="row">
-	<?php echo $form->label($model,'username'); ?>
-	<?php echo $form->textField($model,'username'); ?>
-	<?php echo $form->error($model,'username'); ?>
+		<div style="width:120px;" class="left"> <?php echo $form->label($model,'username'); ?> </div>
+		<div class="left"> <?php echo $form->textField($model,'username'); ?> </div>
+		<div class="left" style="margin-left:5px;margin-top:3px;"> <?php echo $form->error($model,'username'); ?> </div>
 	</div>
-	
+	<div class="clear"> </div>
 	<div class="row">
-	<?php echo $form->label($model,'password'); ?>
-	<?php echo $form->passwordField($model,'password'); ?>
-	<?php echo $form->error($model,'password'); ?>
+		<div style="width:120px;" class="left"> <?php echo $form->label($model,'password'); ?> </div>
+		<div class="left"> <?php echo $form->passwordField($model,'password'); ?> </div>
+		<div class="left" style="margin-left:5px;margin-top:3px;"> <?php echo $form->error($model,'password'); ?> </div>
 	</div>
-	
+	<div class="clear"> </div>
 	<div class="row">
-	<?php echo $form->label($model,'verifyPassword'); ?>
-	<?php echo $form->passwordField($model,'verifyPassword'); ?>
-	<?php echo $form->error($model,'verifyPassword'); ?>
+		<div style="width:120px;" class="left"> <?php echo $form->label($model,'verifyPassword'); ?> </div>
+		<div class="left"> <?php echo $form->passwordField($model,'verifyPassword'); ?> </div>
+		<div class="left" style="margin-left:5px;margin-top:3px;"> <?php echo $form->error($model,'verifyPassword'); ?> </div>
 	</div>
+	<div class="clear"> </div>
 <?php 
 		$profileFields=$profile->getFields();
 		if ($profileFields) {
 			foreach($profileFields as $field) {
 			?>
 	<div class="row">
-		<?php echo $form->label($profile,$field->varname); ?>
+		<div style="width:120px;" class="left"> <?php echo $form->label($profile,$field->varname); ?> </div>
+		<div class="left">
 		<?php 
 		if ($widgetEdit = $field->widgetEdit($profile)) {
 			echo $widgetEdit;
@@ -79,15 +80,20 @@ $this->breadcrumbs=array(
 				echo $form->textField($profile,$field->varname,array('size'=>50,'maxlength'=>(($field->field_size)?$field->field_size:255)));
 			}
 		}
-		 ?>
-		<?php echo $form->error($profile,$field->varname); ?>
+		?>
+		</div>
+		  
+		<div class="left" style="margin-left:5px;margin-top:3px;"> <?php echo $form->error($profile,$field->varname); ?> </div>
 	</div>	
+		<div class="clear"> </div>
 			<?php
 			}
 		}
-?>
+?>	
+	<!-- <input type="submit" name="yt0" value="DAFTAR" class="link_blue"> -->
+	
 	<div class="row submit">
-		<?php echo CHtml::submitButton("Mendaftar"); ?>
+		<?php echo CHtml::submitButton("DAFTAR"); ?>
 	</div>
 
 <?php $this->endWidget(); ?>
