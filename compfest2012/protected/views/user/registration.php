@@ -4,14 +4,15 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<div style="padding-bottom:15px; font-size:18px; color:#46c2ca;"> <?php echo "Mendaftarkan diri menjadi murid DUNIA ANAK CERDAS"; ?> </div>
+<div class="link_red">  MENDAFTARKAN DIRI MENJADI MURID DUNIA ANAK CERDAS </div>
+<br><br>
 
 <?php if(Yii::app()->user->hasFlash('registration')): ?>
 <div class="success">
 <?php echo Yii::app()->user->getFlash('registration'); ?>
 </div>
 <?php else: ?>
-<div class="form">
+<div class="form" style="margin-left:20px;">
 <?php $form=$this->beginWidget('UActiveForm', array(
 	'id'=>'registration-form',
 	'enableAjaxValidation'=>true,
@@ -90,12 +91,11 @@ $this->breadcrumbs=array(
 			}
 		}
 ?>	
-	<!-- <input type="submit" name="yt0" value="DAFTAR" class="link_blue"> -->
-	
-	<div class="row submit">
+	<br>
+	<div class="row submit left">
 		<?php echo CHtml::submitButton("DAFTAR"); ?>
 	</div>
-
+	<br><br>
 <?php $this->endWidget(); ?>
 </div><!-- form -->
 <?php endif; ?>

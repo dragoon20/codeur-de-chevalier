@@ -188,3 +188,8 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+.box_green {width:47%;float:left;height:300px; border:4px solid #64cccb; background-color:#a6dddc; border-radius:10px; color:#fff;}
+.box_pink {margin-left:25px; width:47%;float:left;height:300px;border:4px solid #ff999d; border-radius:10px; color:#fff; background-color:#ffd3d5;}
+.box_orange {width:47%;float:left;height:300px; border:4px solid #fc9836; background-color:#ffc851; border-radius:10px; color:#fff;}
+.box_purple {margin-left:25px; width:47%;float:left;height:300px;border:4px solid #936594; border-radius:10px; color:#fff; background-color:#c4abd6;}
