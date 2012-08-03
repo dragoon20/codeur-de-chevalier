@@ -2,8 +2,11 @@
 	<div class="title">
 		<h1>
 		<?php 
-			echo CHtml::link(CHtml::encode($data->judul), "view/".$data->materi_id);
-			  $profile=Profiles::model()->findByAttributes(array('user_id'=>$data->user_id));
+			if (!Yii::app()->user->isGuest)
+				echo CHtml::link(CHtml::encode($data->judul), "view/".$data->materi_id);
+			else
+				echo CHtml::encode($data->judul);
+			$profile=Profiles::model()->findByAttributes(array('user_id'=>$data->user_id));
 		?>
 		</h1>
 	</div>
@@ -14,6 +17,9 @@
 			echo $data->deskripsi;
 			$this->endWidget();
 		?>
+	</div>
+	<div class="author">
+		made by <?php echo $profile->name; ?>
 	</div>
 	<div class="datebox right">
 		<?php echo date('H:i:s - D, d F Y',$data->update_time); ?>

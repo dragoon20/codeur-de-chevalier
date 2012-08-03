@@ -46,7 +46,7 @@
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
 				array('label'=>'Masuk', 'url'=>array('/user/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Daftar', 'url'=>array('/user/register'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Unggah Materi', 'url'=>array('/materi/create_kuliah'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
+				array('label'=>'Buat Materi', 'url'=>array('/materi/create'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
 				array('label'=>'Edit Materi', 'url'=>array('/materi/manage'), 'visible'=>!Yii::app()->user->isGuest&&Yii::app()->user->getState('type')==0),
 				array('label'=>'Keluar', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
@@ -60,7 +60,7 @@
 		<div class="breadcrumbs">
 			<?php if(isset($this->breadcrumbs)):?>
 				<?php $this->widget('zii.widgets.CBreadcrumbs', array(
-					'homeLink'=>CHtml::link('Home', array('/materi/index')),
+					'homeLink'=>CHtml::link('Home', array('/site/index')),
 					'links'=>$this->breadcrumbs,
 				)); ?>
 				<!-- breadcrumbs -->
@@ -71,10 +71,10 @@
 		<div class="clear"></div>
 	
 		<div id="footer">
-			<a href="#"> Beranda </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#">Tentang Kami </a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#">FAQ </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-			<a href="#">Hubungi Kami </a>
+			<?php echo CHtml::link("Beranda",Yii::app()->baseUrl."/site/index"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<?php echo CHtml::link("Tentang Kami",Yii::app()->baseUrl."/site/about"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<?php echo CHtml::link("FAQ",Yii::app()->baseUrl."/site/faq"); ?>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			<?php echo CHtml::link("Hubungi Kami",Yii::app()->baseUrl."/site/contact"); ?>
 		</div><!-- footer -->
 	
 	</div><!-- page -->

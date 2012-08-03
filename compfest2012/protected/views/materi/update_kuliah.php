@@ -1,7 +1,7 @@
 <?php
 $this->breadcrumbs=array(
 	'Materi'=>array('index'),
-	'Create Kuliah',
+	'Edit Data Materi',
 );
 ?>
 

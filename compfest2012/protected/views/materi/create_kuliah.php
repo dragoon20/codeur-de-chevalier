@@ -1,7 +1,8 @@
 <?php
 $this->breadcrumbs=array(
 	'Materi'=>array('index'),
-	'Create Kuliah',
+	'Buat'=>array('create'),
+	'Tulis Materi',
 );
 ?>
 

@@ -1,6 +1,15 @@
 <div class="materi">
 	<div class="link_blue right">
-		<?php echo CHtml::link("Ubah Data","change_data_kuliah/".$data->materi_id); ?>
+		<?php
+			if ($data->materi_type==1)
+			{
+				echo CHtml::link("Ubah Data","change_data_kuliah/".$data->materi_id); 
+			}
+			else if ($data->materi_type==2)
+			{
+				echo CHtml::link("Ubah Data","change_data_pp/".$data->materi_id); 
+			} 
+		?>
 	</div>
 	<div class="link_blue right">
 		<?php echo CHtml::link("Ubah Template","change_template/".$data->materi_id); ?>
