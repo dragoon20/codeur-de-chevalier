@@ -23,9 +23,7 @@
 
 <body>
 	
-		<div id="content">
-			<?php echo $content; ?>
-		</div><!-- content -->
+		<?php echo $content; ?>
 	
 		<div class="clear"></div>
 	

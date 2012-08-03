@@ -26,6 +26,7 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else {
 			$this->_id=$user->user_id;
+			$this->setState('type', $user->user_type);
 			$this->username=$user->username;
 			$this->errorCode=self::ERROR_NONE;
 		}
@@ -39,4 +40,5 @@ class UserIdentity extends CUserIdentity
 	{
 		return $this->_id;
 	}
+	
 }

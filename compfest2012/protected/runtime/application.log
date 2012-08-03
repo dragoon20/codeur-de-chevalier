@@ -1603,3 +1603,371 @@ Stack trace:
 REQUEST_URI=/compfest2012/materi/view/tes
 HTTP_REFERER=http://localhost/compfest2012/materi/view/2
 ---
+2012/08/03 06:30:49 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "baseUrl".' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\protected\views\materi\view.php(15): CComponent->__call('baseUrl', Array)
+#1 C:\xampp\htdocs\compfest2012\protected\views\materi\view.php(15): CWebApplication->baseUrl()
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(870): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(86): CController->render('view', Array)
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionView()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('view')
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/view')
+#13 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/compfest2012/materi/view/2
+---
+2012/08/03 06:45:02 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.isGues" is not defined.' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\auth\CWebUser.php(141): CComponent->__get('isGues')
+#1 C:\xampp\htdocs\compfest2012\protected\views\layouts\main.php(34): CWebUser->__get('isGues')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\compfest2012\protected\views\layouts\layout.php(7): CBaseController->endContent()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(785): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(27): CController->render('login', Array)
+#14 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#15 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#19 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#20 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/compfest2012/user/login
+HTTP_REFERER=http://localhost/compfest2012/materi/create_kuliah
+---
+2012/08/03 06:45:15 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.isGuestt" is not defined.' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\auth\CWebUser.php(141): CComponent->__get('isGuestt')
+#1 C:\xampp\htdocs\compfest2012\protected\views\layouts\main.php(35): CWebUser->__get('isGuestt')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\compfest2012\protected\views\layouts\layout.php(7): CBaseController->endContent()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(785): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\compfest2012\protected\controllers\UserController.php(27): CController->render('login', Array)
+#14 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): UserController->actionLogin()
+#15 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('login')
+#19 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('user/login')
+#20 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/compfest2012/user/login
+HTTP_REFERER=http://localhost/compfest2012/materi/create_kuliah
+---
+2012/08/03 06:45:36 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.type" is not defined.' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\auth\CWebUser.php(155): CComponent->__set('type', 1)
+#1 C:\xampp\htdocs\compfest2012\protected\views\layouts\main.php(35): CWebUser->__set('type', 1)
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\compfest2012\protected\views\layouts\layout.php(7): CBaseController->endContent()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(785): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(17): CController->render('index', Array)
+#14 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
+#15 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/index')
+#20 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/compfest2012/materi/index
+HTTP_REFERER=http://localhost/compfest2012/user/login
+---
+2012/08/03 06:47:51 [error] [exception.CException] exception 'CException' with message 'Property "CWebUser.type" is not defined.' in C:\xampp\htdocs\compfest2012\yii\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\auth\CWebUser.php(155): CComponent->__set('type', 1)
+#1 C:\xampp\htdocs\compfest2012\protected\views\layouts\main.php(35): CWebUser->__set('type', 1)
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(77): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\CContentDecorator.php(55): CContentDecorator->decorate('<div class="spa...')
+#6 C:\xampp\htdocs\compfest2012\yii\framework\web\widgets\COutputProcessor.php(45): CContentDecorator->processOutput('<div class="spa...')
+#7 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(207): COutputProcessor->run()
+#8 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(301): CBaseController->endWidget('CContentDecorat...')
+#9 C:\xampp\htdocs\compfest2012\protected\views\layouts\layout.php(7): CBaseController->endContent()
+#10 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(127): require('C:\xampp\htdocs...')
+#11 C:\xampp\htdocs\compfest2012\yii\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#12 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(785): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\compfest2012\protected\controllers\MateriController.php(17): CController->render('index', Array)
+#14 C:\xampp\htdocs\compfest2012\yii\framework\web\actions\CInlineAction.php(50): MateriController->actionIndex()
+#15 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('index')
+#19 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/index')
+#20 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/compfest2012/materi/index
+HTTP_REFERER=http://localhost/compfest2012/user/login
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/bodyFront.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/bodyBack.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/rightHand.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/lid.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/leftArm.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/rightArm.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/leftHand.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/shoulder.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/crownFrame.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/face.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/bodyFront.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/lid.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/rightHand.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/leftArm.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/rightArm.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/bodyBack.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/leftHand.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/shoulder.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/face.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:07:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "images".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php:484
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CController.php(271): CController->missingAction('images')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(276): CController->run('images')
+#2 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('materi/images/r...')
+#3 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/compfest2012/materi/images/robot/crownFrame.png
+HTTP_REFERER=http://localhost/compfest2012/materi/view/2
+---
+2012/08/03 07:44:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lid".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lid')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/images/lid
+---
+2012/08/03 07:44:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/lid.png".' in C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\xampp\htdocs\compfest2012\yii\framework\web\CWebApplication.php(135): CWebApplication->runController('images/lid.png')
+#1 C:\xampp\htdocs\compfest2012\yii\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\compfest2012\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/compfest2012/images/lid.png
+---

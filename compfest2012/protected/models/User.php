@@ -60,7 +60,7 @@ class User extends CActiveRecord
     {
         return array(
             'notsafe'=>array(
-            	'select' => 'user_id, username, password',
+            	'select' => 'user_id, username, password, user_type',
             ),
         );
     }
